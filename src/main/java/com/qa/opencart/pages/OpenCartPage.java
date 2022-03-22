@@ -1,6 +1,5 @@
 package com.qa.opencart.pages;
 
-import com.sun.java_cup.internal.runtime.Symbol;
 
 public class OpenCartPage {
 
