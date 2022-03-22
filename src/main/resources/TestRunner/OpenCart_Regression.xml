@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Open SourceEcomm TestNGTesting Regression suite">
+	 <listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+			<listener
+			class-name="com.qa.opencart.listeners.TestAllureListener" />
+			<listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
+	</listeners> 
+	<test name="MyRegression test--LoginPageTest" parallel="tests"
+		thread-count="2">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="com.qa.opencart.Test.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="MyRegression test--AccountsPageTest" parallel="tests"
+		thread-count="2">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.qa.opencart.Test.AccountsPageTest" />
+		</classes>
+	</test>
+
+	<test name="MyRegression test--ProductInfoPageTest" parallel="tests"
+		thread-count="2">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.qa.opencart.Test.ProductInfoPageTest" />
+		</classes>
+	</test>
+
+	<test name="MyRegression test--LoginPageNegativeTest" parallel="tests"
+		thread-count="2">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="com.qa.opencart.Test.LoginPageNegativeTest" />
+		</classes>
+	</test>
+</suite> 
+
